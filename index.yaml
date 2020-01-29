@@ -3,11 +3,20 @@ entries:
   ingress-cert-reflector:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-01-29T11:22:26.703142235+09:00"
+    created: "2020-01-29T12:55:45.5357359+09:00"
+    description: A Helm chart for Kubernetes
+    digest: 6002cc532e28553401d41eb15be66d9734877fd84bed8818656eb9e2a10cda70
+    name: ingress-cert-reflector
+    urls:
+    - ingress-cert-reflector-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-01-29T12:55:45.53549363+09:00"
     description: A Helm chart for Kubernetes
     digest: 2aae9676a2cb9a11667d2e626995de1a4358caafe5909c4b1e6b148007191602
     name: ingress-cert-reflector
     urls:
     - ingress-cert-reflector-0.1.0.tgz
     version: 0.1.0
-generated: "2020-01-29T11:22:26.702449126+09:00"
+generated: "2020-01-29T12:55:45.535086076+09:00"

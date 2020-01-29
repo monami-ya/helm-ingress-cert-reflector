@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ingress-cert-reflector
+  name: {{ template "ingress-cert-reflector.fullname" . }}
   namespace: {{ .Release.Namespace | quote }}
 spec:
   replicas: 1
@@ -13,10 +13,10 @@ spec:
       labels:
         app: ingress-cert-reflector
     spec:
-      serviceAccountName: ingress-cert-reflector
+      serviceAccountName: {{ template "ingress-cert-reflector.serviceAccountName" . }}
       containers:
       - name: ns-watch
-        image: boxboat/kubectl:${KUBECTL_VERSION}
+        image: boxboat/kubectl:latest
         command:
         - sh
         - -c
@@ -34,7 +34,7 @@ spec:
             done
           done
       - name: secret-watch
-        image: boxboat/kubectl:${KUBECTL_VERSION}
+        image: boxboat/kubectl:latest
         command:
         - sh
         - -c
